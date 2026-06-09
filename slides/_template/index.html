@@ -6,8 +6,7 @@
     <title>簡報</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="../../assets/navy-theme.css">
   </head>
   <body>
     <div class="reveal">
@@ -33,6 +32,11 @@
             text.replace(/^---\n[\s\S]*?\n---\n/, '');
           Reveal.initialize({
             hash: true,
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0,
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
           });
         });

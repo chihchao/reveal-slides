@@ -74,7 +74,7 @@ Notes: 記得告訴觀眾這是測試用的範例
 
 <!-- .slide: class="cover" -->
 
-# 簡報標題\n放在這裡
+# 簡報標題放在這裡
 
 ## 副標題 · 2026.01 · 單位名稱
 
@@ -97,7 +97,7 @@ Notes: 記得告訴觀眾這是測試用的範例
 
 <!-- .slide: class="section-page" -->
 
-<span class="num">01</span>
+<div class="num">01</div>
 
 # 背景與目的
 
@@ -221,6 +221,30 @@ hello()
 ```
 
 Notes: 這是講者備忘，按 S 開啟講者模式
+
+---
+
+<!-- .slide: class="text-image" -->
+
+<div class="ti-left">
+
+# 圖文並排標題
+
+<hr>
+
+這裡放入主要說明文字，搭配右側圖片輔助說明。
+
+- 第一項重點說明
+- 第二項重點說明
+- 第三項重點說明
+
+</div>
+<div class="ti-right">
+
+![圖片說明](https://static.slid.es/reveal/logo-v1/reveal-white-text.svg)
+<!-- .element: style="width: 100%;" -->
+
+</div>
 
 ---
 
