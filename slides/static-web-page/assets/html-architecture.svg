@@ -1,89 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="500" height="530" viewBox="0 0 500 530"
-     font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace">
+     viewBox="0 0 820 480"
+     width="820" height="480">
 
-  <rect width="500" height="530" fill="#ffffff"/>
+  <title>HTML DOM 樹狀結構</title>
 
-  <!-- Connectors (drawn behind nodes) -->
+  <defs>
+    <style type="text/css"><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700');
+      text { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+    ]]></style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="480" fill="#ffffff"/>
+
+  <!-- Diagram title -->
+  <text x="410" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">HTML DOM 樹狀結構</text>
+
+  <!-- ── Connectors (drawn first, behind nodes) ─────────────── -->
   <g stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- html → head | body -->
-    <line x1="250" y1="70" x2="250" y2="97"/>
-    <polyline points="250,97 110,97 110,100"/>
-    <polyline points="250,97 390,97 390,100"/>
 
-    <!-- head → meta -->
-    <polyline points="110,155 110,172 105,172 105,180"/>
-    <!-- head → title -->
-    <polyline points="110,155 110,242 105,242 105,250"/>
+    <!-- html → (junction y=132) → head, body -->
+    <polyline points="400,100 400,132"/>
+    <polyline points="400,132 220,132 220,165"/>
+    <polyline points="400,132 580,132 580,165"/>
 
-    <!-- body → h1 -->
-    <polyline points="390,155 390,172 375,172 375,180"/>
-    <!-- body → p -->
-    <polyline points="390,155 390,242 375,242 375,250"/>
-    <!-- body → ol -->
-    <polyline points="390,155 390,312 375,312 375,320"/>
+    <!-- head → (junction y=247) → meta, title -->
+    <polyline points="220,215 220,247"/>
+    <polyline points="220,247 155,247 155,280"/>
+    <polyline points="220,247 285,247 285,280"/>
 
-    <!-- ol → li (共用 stem 後分叉) -->
-    <line x1="375" y1="375" x2="375" y2="382"/>
-    <polyline points="375,382 380,382 380,390"/>
-    <polyline points="375,382 375,452 380,452 380,460"/>
+    <!-- body → (junction y=247) → h1, p, ol -->
+    <polyline points="580,215 580,247"/>
+    <polyline points="580,247 465,247 465,280"/>
+    <polyline points="580,247 580,280"/>
+    <polyline points="580,247 695,247 695,280"/>
+
+    <!-- ol → (junction y=362) → li×2 -->
+    <polyline points="695,330 695,362"/>
+    <polyline points="695,362 635,362 635,395"/>
+    <polyline points="695,362 755,362 755,395"/>
+
   </g>
 
-  <!-- Branch junction dots -->
+  <!-- Junction dots -->
   <g fill="#9ca3af">
-    <circle cx="250" cy="97"  r="2.5"/>
-    <circle cx="375" cy="382" r="2.5"/>
+    <circle cx="400" cy="132" r="3"/>
+    <circle cx="220" cy="247" r="3"/>
+    <circle cx="580" cy="247" r="3"/>
+    <circle cx="695" cy="362" r="3"/>
   </g>
+
+  <!-- ── Nodes ──────────────────────────────────────────────── -->
 
   <!-- html — purple -->
-  <rect x="155" y="15"  width="190" height="55" rx="10" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
-  <text x="250" y="37" text-anchor="middle" font-size="13" font-weight="bold" fill="#6b21a8">html</text>
-  <text x="250" y="57" text-anchor="middle" font-size="10.5" fill="#7e22ce">&lt;html lang="zh-TW"&gt;</text>
+  <rect x="350" y="50" width="100" height="50" rx="8" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="400" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#6b21a8">html</text>
+  <text x="400" y="88" text-anchor="middle" font-size="9" fill="#7e22ce">lang="zh-TW"</text>
 
   <!-- head — amber -->
-  <rect x="15"  y="100" width="190" height="55" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
-  <text x="110" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">head</text>
-  <text x="110" y="142" text-anchor="middle" font-size="10.5" fill="#92400e">&lt;head&gt;</text>
+  <rect x="170" y="165" width="100" height="50" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="220" y="185" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">head</text>
+  <text x="220" y="203" text-anchor="middle" font-size="9" fill="#92400e">&lt;head&gt;</text>
 
   <!-- body — amber -->
-  <rect x="295" y="100" width="190" height="55" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
-  <text x="390" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">body</text>
-  <text x="390" y="142" text-anchor="middle" font-size="10.5" fill="#92400e">&lt;body&gt;</text>
+  <rect x="530" y="165" width="100" height="50" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="580" y="185" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">body</text>
+  <text x="580" y="203" text-anchor="middle" font-size="9" fill="#92400e">&lt;body&gt;</text>
 
   <!-- meta — green -->
-  <rect x="10"  y="180" width="190" height="55" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
-  <text x="105" y="202" text-anchor="middle" font-size="13" font-weight="bold" fill="#14532d">meta</text>
-  <text x="105" y="222" text-anchor="middle" font-size="10.5" fill="#14532d">&lt;meta charset="UTF-8" /&gt;</text>
+  <rect x="105" y="280" width="100" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="155" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">meta</text>
+  <text x="155" y="318" text-anchor="middle" font-size="8.5" fill="#14532d">charset="UTF-8"</text>
 
   <!-- title — green -->
-  <rect x="10"  y="250" width="190" height="55" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
-  <text x="105" y="272" text-anchor="middle" font-size="13" font-weight="bold" fill="#14532d">title</text>
-  <text x="105" y="292" text-anchor="middle" font-size="10.5" fill="#14532d">&lt;title&gt;我的第一個網頁&lt;/title&gt;</text>
+  <rect x="235" y="280" width="100" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="285" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">title</text>
+  <text x="285" y="318" text-anchor="middle" font-size="9" fill="#14532d">&lt;title&gt;...&lt;/title&gt;</text>
 
   <!-- h1 — blue -->
-  <rect x="280" y="180" width="190" height="55" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="375" y="202" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">h1</text>
-  <text x="375" y="222" text-anchor="middle" font-size="10.5" fill="#1e3a8a">&lt;h1&gt;哈囉，世界！&lt;/h1&gt;</text>
+  <rect x="415" y="280" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="465" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">h1</text>
+  <text x="465" y="318" text-anchor="middle" font-size="9" fill="#1e3a8a">&lt;h1&gt;...&lt;/h1&gt;</text>
 
   <!-- p — blue -->
-  <rect x="280" y="250" width="190" height="55" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="375" y="272" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">p</text>
-  <text x="375" y="292" text-anchor="middle" font-size="10.5" fill="#1e3a8a">&lt;p&gt;這是一個段落。&lt;/p&gt;</text>
+  <rect x="530" y="280" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="580" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">p</text>
+  <text x="580" y="318" text-anchor="middle" font-size="9" fill="#1e3a8a">&lt;p&gt;...&lt;/p&gt;</text>
 
   <!-- ol — blue -->
-  <rect x="280" y="320" width="190" height="55" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="375" y="342" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">ol</text>
-  <text x="375" y="362" text-anchor="middle" font-size="10.5" fill="#1e3a8a">&lt;ol&gt;</text>
+  <rect x="645" y="280" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="695" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">ol</text>
+  <text x="695" y="318" text-anchor="middle" font-size="9" fill="#1e3a8a">&lt;ol&gt;</text>
 
   <!-- li 1 — pink -->
-  <rect x="285" y="390" width="190" height="55" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
-  <text x="380" y="412" text-anchor="middle" font-size="13" font-weight="bold" fill="#831843">li</text>
-  <text x="380" y="432" text-anchor="middle" font-size="10.5" fill="#831843">&lt;li&gt;項目一&lt;/li&gt;</text>
+  <rect x="585" y="395" width="100" height="50" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="635" y="415" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">li</text>
+  <text x="635" y="433" text-anchor="middle" font-size="9" fill="#831843">&lt;li&gt;項目一&lt;/li&gt;</text>
 
   <!-- li 2 — pink -->
-  <rect x="285" y="460" width="190" height="55" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
-  <text x="380" y="482" text-anchor="middle" font-size="13" font-weight="bold" fill="#831843">li</text>
-  <text x="380" y="502" text-anchor="middle" font-size="10.5" fill="#831843">&lt;li&gt;項目二&lt;/li&gt;</text>
+  <rect x="705" y="395" width="100" height="50" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="755" y="415" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">li</text>
+  <text x="755" y="433" text-anchor="middle" font-size="9" fill="#831843">&lt;li&gt;項目二&lt;/li&gt;</text>
+
+  <!-- ── Legend ──────────────────────────────────────────────── -->
+  <g font-size="9" fill="#4b5563">
+    <rect x="118" y="454" width="11" height="11" rx="2" fill="#f3e8ff" stroke="#9333ea" stroke-width="1"/>
+    <text x="133" y="464">根元素</text>
+
+    <rect x="218" y="454" width="11" height="11" rx="2" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+    <text x="233" y="464">文件結構</text>
+
+    <rect x="333" y="454" width="11" height="11" rx="2" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+    <text x="348" y="464">head 子元素</text>
+
+    <rect x="468" y="454" width="11" height="11" rx="2" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="483" y="464">body 子元素</text>
+
+    <rect x="608" y="454" width="11" height="11" rx="2" fill="#fce7f3" stroke="#db2777" stroke-width="1"/>
+    <text x="623" y="464">清單項目</text>
+  </g>
 
 </svg>
