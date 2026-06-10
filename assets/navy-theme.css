@@ -134,7 +134,7 @@
   color: var(--text);
 }
 
-.reveal .slides section blockquote > p:first-child strong {
+.reveal .slides section blockquote > p:first-child > strong:first-of-type {
   display: block;
   font-size: 13px;
   color: var(--navy);
