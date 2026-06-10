@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 .claude/
+
+# Synology NAS 系統暫存檔
+@eaDir/
+@eaDir
+*@SynoResource
+*@SynoEAStream
