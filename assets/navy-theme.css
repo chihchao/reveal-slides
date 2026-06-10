@@ -184,6 +184,8 @@
   margin: 0 0 16px;
   box-shadow: none;
   width: auto;
+  max-height: none;
+  overflow: hidden;
 }
 
 .reveal .slides section pre code,
@@ -194,6 +196,7 @@
   line-height: 1.5;
   max-height: none;
   border-radius: 0;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
 }
 
 /* ══════════════════════════════════════════════════════════════
