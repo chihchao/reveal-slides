@@ -16,7 +16,7 @@ description: 第一份 Reveal.js 簡報，測試用
 
 ---
 
-# 這份簡報用 Markdown 寫
+### 這份簡報用 Markdown 寫
 
 <hr>
 
@@ -35,7 +35,7 @@ description: 第一份 Reveal.js 簡報，測試用
 
 <span class="num">↓</span>
 
-# 垂直子頁範例
+## 垂直子頁範例
 
 <hr>
 
@@ -43,7 +43,7 @@ description: 第一份 Reveal.js 簡報，測試用
 
 ---
 
-# 程式碼高亮
+### 程式碼高亮
 
 <hr>
 
@@ -62,7 +62,7 @@ Notes: 記得告訴觀眾這是測試用的範例
 
 <!-- .slide: class="closing" -->
 
-# 謝謝觀看
+### 謝謝觀看
 
 <hr>
 
@@ -84,7 +84,7 @@ Notes: 記得告訴觀眾這是測試用的範例
 
 ---
 
-# 目錄
+### 目錄
 
 <hr>
 
@@ -99,7 +99,7 @@ Notes: 記得告訴觀眾這是測試用的範例
 
 <div class="num">01</div>
 
-# 背景與目的
+## 背景與目的
 
 <hr>
 
@@ -107,7 +107,7 @@ Section subtitle or description goes here.
 
 ---
 
-# 投影片標題
+### 投影片標題
 
 <hr>
 
@@ -122,7 +122,7 @@ Section subtitle or description goes here.
 
 ---
 
-# 投影片標題
+### 投影片標題
 
 <hr>
 
@@ -139,7 +139,7 @@ Section subtitle or description goes here.
 
 <!-- .slide: class="cols" -->
 
-# 兩欄比較
+### 兩欄比較
 
 <hr>
 
@@ -170,7 +170,7 @@ Section subtitle or description goes here.
 
 <!-- .slide: class="stats" -->
 
-# 關鍵數據
+### 關鍵數據
 
 <hr>
 
@@ -194,7 +194,7 @@ Section subtitle or description goes here.
 
 ---
 
-# 表格標題
+### 表格標題
 
 <hr>
 
@@ -207,7 +207,7 @@ Section subtitle or description goes here.
 
 ---
 
-## 程式碼範例
+### 程式碼範例
 
 <hr>
 
@@ -228,7 +228,7 @@ Notes: 這是講者備忘，按 S 開啟講者模式
 
 <div class="ti-left">
 
-# 圖文並排標題
+### 圖文並排標題
 
 <hr>
 
@@ -250,7 +250,7 @@ Notes: 這是講者備忘，按 S 開啟講者模式
 
 <!-- .slide: class="closing" -->
 
-# 謝謝觀看
+### 謝謝觀看
 
 <hr>
 
